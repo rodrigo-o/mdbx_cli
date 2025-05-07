@@ -1,0 +1,11 @@
+[package]
+name = "mdbx_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libmdbx = "0.5.4"
+rustyline = "10.0"
+clap = { version = "4.5", features = ["derive"] }
+shell-words = "1.1.0"
+tempfile = "3.19.1"
