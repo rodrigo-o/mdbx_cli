@@ -1,7 +1,22 @@
 # MDBX CLI Tool
 
 ## Overview
-The MDBX CLI Tool is an interactive command-line interface for managing and interacting with an MDBX database. It allows users to perform various operations such as creating tables, inserting key-value pairs, retrieving data, and more.
+Super naive interactive command-line interface for managing and interacting with an MDBX database.
+
+## Usage
+1. Build the project using Cargo:
+   ```bash
+   cargo build
+   ```
+2. Run the CLI tool:
+   ```bash
+   cargo run -- --db-path <path_to_mdbx_file>
+   ```
+3. Enter commands interactively in the shell.
+
+## Notes
+- Ensure the MDBX database file exists before running the tool.
+- Use the `create_table` command to create tables before performing operations on them.
 
 ## How It Works
 1. **Initialization**: The tool initializes an MDBX environment using the provided database file path.
@@ -55,21 +70,6 @@ Lists all tables in the database.
 Clears all key-value pairs from the specified table.
 - **Example**: `empty_table my_table`
 - **Output**: `Table 'my_table' emptied successfully.`
-
-## Usage
-1. Build the project using Cargo:
-   ```bash
-   cargo build
-   ```
-2. Run the CLI tool:
-   ```bash
-   cargo run -- --db-path <path_to_mdbx_file>
-   ```
-3. Enter commands interactively in the shell.
-
-## Notes
-- Ensure the MDBX database file exists before running the tool.
-- Use the `create_table` command to create tables before performing operations on them.
 
 ## License
 This project is licensed under the MIT License.
